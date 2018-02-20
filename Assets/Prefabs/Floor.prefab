@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33063893182022856}
   - component: {fileID: 65414331779402620}
   - component: {fileID: 23099402106536582}
+  - component: {fileID: 114253770093535206}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -55,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f65099f8fa560c647a31137bd24f1b80, type: 2}
+  - {fileID: 2100000, guid: 558a5deb939d6ca4e8f7e0d1fedd6bdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,3 +94,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114253770093535206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177637856123930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f6bd7792c83a24ca41be6864dcd796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: 558a5deb939d6ca4e8f7e0d1fedd6bdc, type: 2}
+  Color1: {r: 0.49264705, g: 0.34775087, b: 0, a: 1}
+  Color2: {r: 1, g: 0, b: 0.7941179, a: 0}
