@@ -9,13 +9,15 @@ public class Camera_Model : MonoBehaviour
 	//Zooming camera in
 	public double x, y, z;
 
-	public Transform LookAtTarget;
-	public Vector3 CamPosition;
+	public Transform Target;
+	public Vector3 RelativePosition;
 	public Rigidbody rb;
 
 	public double Y
 	{
+		//Value y gives when its called
 		get { return y; }
+		//y = Value
 		set { y = -0.5; }
 	}
 
@@ -25,16 +27,20 @@ public class Camera_Model : MonoBehaviour
 		set { z = 1.5; }
 	}
 
+	public bool IsFirstPersonMode;
+
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		RelativePosition = transform.position - Target.position;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		transform.LookAt(LookAtTarget);
-		
+		//transform.position = Target.position + RelativePosition;
+
 		//zoom in and out
 		if (Input.GetKeyDown(KeyCode.UpArrow))
 		{

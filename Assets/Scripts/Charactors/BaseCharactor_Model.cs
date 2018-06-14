@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class BaseCharactor_Model : MonoBehaviour
 {
-	private int StartHitPoints;
-	private int CurrentHitPoints;
-	private int MaxHitPoints;
-	private int DecressHitPoints;
+	public int StartHitPoints;
+	public int StartManaPoints;
+	public int StartStaminaPoints;
 
-	private int StartManaPoints;
-	private int CurrentManaPoints;
-	private int MaxManaPoints;
-	private int DecressManaPoints;
+	public int CurrentHitPoints;
+	public int CurrentManaPoints;
+	public int CurrentStaminaPoints;
 
-	private int StartStaminaPoints;
-	private int CurrentStaminaPoints;
-	private int MaxStaminaPoints;
-	private int DecressStaminaPoints;
+	public int MaxHitPoints;
+	public int MaxManaPoints;
+	public int MaxStaminaPoints;
+
+	public int DecressHitPoints;
+	public int DecressManaPoints;
+	public int DecressStaminaPoints;
 
 	public enum CharactorType
 	{
@@ -25,9 +26,9 @@ public class BaseCharactor_Model : MonoBehaviour
 		Non_PlayableCharactor
 	}
 
-	public virtual void SetVariable(int Start, int Current)
+	public virtual int SetVariable(int Start)
 	{
-		Current = Start;
+		return Start;
 	}
 
 	public virtual bool CheckVariable(int Current, int CheckAmount)
@@ -35,9 +36,14 @@ public class BaseCharactor_Model : MonoBehaviour
 		return Current == CheckAmount;
 	}
 
+	public virtual int IncressVariable(int Current, int IncressPoints)
+	{
+		return Current - IncressPoints;
+	}
+
 	public virtual int DecressVariable(int Current, int DecressPoints)
 	{
-		return Current = Current - DecressPoints;
+		return Current - DecressPoints;
 	}
 
 

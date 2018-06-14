@@ -2,27 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Agent_Model : BaseCharator_Model
+public class Agent_Model : BaseCharactor_Model
 {
 	public enum AgentType
 	{
 		Villager,
-		Merchent,
+		Merchant,
 		Blacksmith,
-		Frammer,
-		Inn_Keeper,
-
+		Framer,
+		Inn_Keeper
 	}
+	
+	
 
-	// Use this for initialization
-	void Start()
-	{
-
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-
-	}
 }
